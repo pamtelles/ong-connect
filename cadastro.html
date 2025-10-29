@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro de Voluntário - Ong Connect</title>
 
-    <!-- Conexão com o estilo -->
-    <link rel="stylesheet" href="style.css">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro - Ong Connect</title>
+
+    <!-- Estilo principal -->
+    <link rel="stylesheet" href="style.css" />
 
     <!-- Fonte Poppins -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- Ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
+
 <body>
 
     <!-- Cabeçalho -->
@@ -25,42 +30,101 @@
         </nav>
     </header>
 
-    <!-- Conteúdo principal -->
+    <!-- Seção de cadastro -->
     <main class="pagina-cadastro">
-        <h2>Cadastre-se como Voluntário</h2>
-        <p>Preencha o formulário abaixo e junte-se à nossa rede de solidariedade 💙</p>
+        <div class="form-container">
+            <h2>Seja um Voluntário</h2>
+            <p>Preencha o formulário abaixo e faça parte de nossos projetos que transformam vidas!</p>
 
-        <form id="formCadastro">
-            <label for="nome">Nome completo:</label>
-            <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
+            <form id="formCadastro">
+                <div class="campo">
+                    <label for="nome">Nome completo</label>
+                    <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+                </div>
 
-            <label for="email">E-mail:</label>
-            <input type="email" id="email" name="email" placeholder="exemplo@email.com" required>
+                <div class="campo">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+                </div>
 
-            <label for="telefone">Telefone:</label>
-            <input type="tel" id="telefone" name="telefone" placeholder="(11) 99999-9999" required>
+                <div class="campo">
+                    <label for="telefone">Telefone</label>
+                    <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000" required>
+                </div>
 
-            <label for="motivo">Por que quer ser voluntário?</label>
-            <textarea id="motivo" name="motivo" rows="4" placeholder="Escreva aqui..." required></textarea>
+                <div class="campo">
+                    <label for="area">Área de interesse</label>
+                    <select id="area" name="area" required>
+                        <option value="">Selecione uma área</option>
+                        <option value="educacao">Educação</option>
+                        <option value="meioambiente">Meio Ambiente</option>
+                        <option value="assistencia">Ação Social</option>
+                        <option value="animais">Cuidado com Animais</option>
+                        <option value="saude">Saúde</option>
+                    </select>
+                </div>
 
-            <button type="submit">Enviar Cadastro</button>
-        </form>
+                <div class="campo">
+                    <label for="mensagem">Por que deseja ser voluntário?</label>
+                    <textarea id="mensagem" name="mensagem" rows="4" placeholder="Conte um pouco sobre você..."
+                        required></textarea>
+                </div>
 
-        <!-- Mensagem de confirmação -->
-        <p id="mensagem" class="mensagem-sucesso"></p>
-
-        <div class="ver-todos">
-            <a href="index.html" class="botao">Voltar ao início</a>
+                <button type="submit" class="btn-primario">Enviar Cadastro</button>
+            </form>
         </div>
     </main>
 
     <!-- Rodapé -->
     <footer>
-        <p>&copy; 2025 Ong Connect - Todos os direitos reservados.</p>
-        <p>Contato: contato@ongconnect.org.br | Instagram: @ongconnect</p>
+        <div class="conteudo-footer">
+            <h3>Ong Connect</h3>
+            <p>Conectando pessoas e projetos que transformam o mundo.<br> Junte-se a nós e faça parte dessa corrente do
+                bem.</p>
+            <div class="redes">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+            </div>
+            <div class="copy">
+                &copy; 2025 Ong Connect. Todos os direitos reservados.
+            </div>
+        </div>
     </footer>
 
-    <!-- JavaScript -->
-    <script src="index.js"></script>
+    <!-- Script -->
+    <script>
+        document.getElementById('formCadastro').addEventListener('submit', function (event) {
+            event.preventDefault();
+            alert('Cadastro enviado com sucesso! Obrigado por se voluntariar 💙');
+            this.reset();
+        });
+    </script>
+
+    <!-- Script que salva os dados no localStorage -->
+    <script>
+        document.getElementById('formCadastro').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            const voluntario = {
+                nome: document.getElementById('nome').value,
+                email: document.getElementById('email').value,
+                telefone: document.getElementById('telefone').value,
+                area: document.getElementById('area').value,
+                mensagem: document.getElementById('mensagem').value,
+            };
+
+            // salva no armazenamento local do navegador
+            let lista = JSON.parse(localStorage.getItem('voluntarios')) || [];
+            lista.push(voluntario);
+            localStorage.setItem('voluntarios', JSON.stringify(lista));
+
+            alert('Cadastro gravado com sucesso! 💙');
+            this.reset();
+        });
+    </script>
+
 </body>
+
 </html>
