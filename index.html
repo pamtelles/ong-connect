@@ -1,1 +1,70 @@
+<!doctype html>
+<html lang="pt-BR">
 
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Plataforma ONGs - Home</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container">
+            <a href="index.html" class="logo">ONGConnect</a>
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="projetos.html">Projetos</a></li>
+                    <li><a href="admin.html">Admin (simulado)</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" aria-label="Apresentação da ONG">
+            <div class="container">
+                <h1>Fortalecendo causas através da tecnologia</h1>
+                <p>Conheça projetos, doe e se torne voluntário.</p>
+            </div>
+        </section>
+
+        <section class="projects container" aria-labelledby="projetos-title">
+            <h2 id="projetos-title">Projetos em destaque</h2>
+            <ul id="projects-list" class="projects-grid" aria-live="polite">
+                <!-- Projetos inseridos por JS -->
+            </ul>
+        </section>
+
+        <section class="cta container">
+            <h2>Quer ajudar agora?</h2>
+            <button id="open-volunteer" class="btn">Quero ser voluntário</button>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>© 2025 ONGConnect - Projeto Acadêmico</p>
+        </div>
+    </footer>
+
+    <div id="donation-modal" class="modal" aria-hidden="true">
+        <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="donation-title">
+            <h3 id="donation-title">Doação (simulada)</h3>
+            <form id="donation-form">
+                <label for="donor-name">Nome</label>
+                <input id="donor-name" name="donorName" required />
+                <label for="donation-amount">Valor (R$)</label>
+                <input id="donation-amount" name="amount" required type="number" min="1" />
+                <button type="submit" class="btn">Confirmar</button>
+                <button type="button" id="close-modal" class="btn btn-secondary">Fechar</button>
+            </form>
+            <div id="donation-success" hidden>Obrigado pela sua contribuição (simulada)!</div>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,128 @@
+:root {
+    --max-width: 1100px;
+    --gap: 1rem;
+    --accent: #1d7a8c;
+    --bg: #f6f8fa;
+    --text: #222;
+    --muted: #666;
+}
+
+* {
+    box-sizing: border-box
+}
+
+body {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    margin: 0;
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.4
+}
+
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 1rem
+}
+
+.site-header {
+    background: #fff;
+    border-bottom: 1px solid #e6e9ed
+}
+
+.site-header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between
+}
+
+.logo {
+    font-weight: 700;
+    color: var(--accent);
+    text-decoration: none
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    padding: 0
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: var(--text)
+}
+
+.hero {
+    padding: 2rem 0;
+    background: linear-gradient(90deg, #eaf6f8, transparent)
+}
+
+.projects {
+    padding: 2rem 0
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: var(--gap);
+    list-style: none;
+    padding: 0;
+    margin: 0
+}
+
+.projects-grid li {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .05)
+}
+
+.btn {
+    display: inline-block;
+    padding: .6rem .9rem;
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer
+}
+
+.btn-secondary {
+    background: #ccc;
+    color: #111
+}
+
+.cta {
+    padding: 1.5rem 0;
+    text-align: center
+}
+
+.site-footer {
+    padding: 1rem 0;
+    text-align: center;
+    font-size: .9rem;
+    color: var(--muted)
+}
+
+.modal {
+    position: fixed;
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, .4)
+}
+
+.modal[aria-hidden="false"] {
+    display: flex
+}
+
+.modal-content {
+    background: #fff;
+    padding: 1rem 1.2rem;
+    border-radius: 8px;
+    width: min(480px, 95%)
+}
