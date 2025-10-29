@@ -163,83 +163,159 @@ nav a:hover::after {
   background: linear-gradient(135deg, #4f46e5, #5ac8fa);
 }
 
-
-/* ======== SEÇÃO PROJETOS ======== */
+/* ======== SEÇÃO PROJETOS EM DESTAQUE ======== */
 .projetos-destaque {
-    background-color: #e3f2fd; /* azul clarinho */
-    padding: 50px 20px;
-    text-align: center;
+  padding: 120px 10%;
+  background: #f8fafc; /* fundo claro para contraste */
+  text-align: center;
+  color: #333;
 }
 
 .projetos-destaque h2 {
-    color: #0077b6;
-    font-size: 26px;
-    margin-bottom: 30px;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #4f46e5; /* combina com o cabeçalho */
+  margin-bottom: 60px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
-/* container dos cards */
+/* ======== GRID DE CARDS ======== */
 .cards {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
 }
 
-/* cada card individual */
+/* ======== CARD INDIVIDUAL ======== */
 .card {
-    background: white;
-    width: 280px;
-    border-radius: 12px;
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    text-align: left;
-    transition: transform 0.3s;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  padding: 40px 30px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(79, 70, 229, 0.15);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Efeito de brilho no hover */
+.card::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(90, 200, 250, 0.15), transparent 70%);
+  transition: opacity 0.5s ease;
+  opacity: 0;
+}
+
+.card:hover::before {
+  opacity: 1;
 }
 
 .card:hover {
-    transform: translateY(-5px);
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(79, 70, 229, 0.2);
 }
 
+/* ======== CONTEÚDO DO CARD ======== */
 .card h3 {
-    color: #0077b6;
-    margin-bottom: 10px;
+  color: #1e1e1e;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
 }
 
 .card p {
-    font-size: 15px;
-    margin-bottom: 15px;
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 25px;
 }
 
+/* ======== BOTÃO ======== */
 .card button {
-    background-color: #0077b6;
-    color: white;
-    border: none;
-    padding: 8px 15px;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: 0.3s;
+  background: linear-gradient(135deg, #4f46e5, #5ac8fa);
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  padding: 12px 28px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .card button:hover {
-    background-color: #005f8d;
+  background: linear-gradient(135deg, #5ac8fa, #4f46e5);
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(79, 70, 229, 0.3);
 }
-
-/* botão "Ver todos" */
+/* ======== BOTÃO "VER TODOS" MODERNO ======== */
 .ver-todos {
-    margin-top: 30px;
+  margin-top: 40px;
+  text-align: center;           /* centraliza o botão */
 }
 
+/* botão principal estilo "pill" com degradê */
 .botao {
-    background-color: #0096c7;
-    color: white;
-    text-decoration: none;
-    padding: 10px 20px;
-    border-radius: 8px;
-    transition: 0.3s;
+  display: inline-block;
+  background: linear-gradient(135deg, #4f46e5, #5ac8fa);
+  color: #ffffff;
+  text-decoration: none;
+  padding: 12px 28px;
+  border-radius: 999px;         /* formato de pill */
+  transition: transform 0.25s ease, box-shadow 0.25s ease, opacity 0.25s ease;
+  box-shadow: 0 8px 20px rgba(79, 70, 229, 0.18);
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  border: 1px solid rgba(255,255,255,0.12);
 }
 
+/* hover: brilho + leve crescimento */
 .botao:hover {
-    background-color: #0077b6;
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 12px 30px rgba(79, 70, 229, 0.28);
+  opacity: 0.98;
+}
+
+/* foco visível para acessibilidade (teclado) */
+.botao:focus {
+  outline: 3px solid rgba(90,200,250,0.28);
+  outline-offset: 4px;
+  box-shadow: 0 12px 30px rgba(79, 70, 229, 0.28);
+}
+
+/* efeito ativo (quando clicar) */
+.botao:active {
+  transform: translateY(-2px) scale(0.995);
+  box-shadow: 0 8px 18px rgba(79, 70, 229, 0.20);
+}
+
+/* responsividade: ajustar padding em telas pequenas */
+@media (max-width: 480px) {
+  .botao {
+    padding: 10px 20px;
+    font-size: 0.95rem;
+  }
+}
+
+
+/* ======== RESPONSIVIDADE ======== */
+@media (max-width: 768px) {
+  .projetos-destaque {
+    padding: 80px 8%;
+  }
+
+  .projetos-destaque h2 {
+    font-size: 2rem;
+  }
+
+  .card {
+    padding: 30px 20px;
+  }
 }
 
 /* ======== RODAPÉ ======== */
