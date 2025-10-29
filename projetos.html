@@ -1,84 +1,110 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projetos - Ong Connect</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projetos - Ong Connect</title>
 
-    <!-- Link para o estilo -->
-    <link rel="stylesheet" href="style.css">
+  <!-- Estilo principal -->
+  <link rel="stylesheet" href="style.css" />
 
-    <!-- Fonte Poppins -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Fonte Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Ícones -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
-    <!-- Cabeçalho -->
-    <header>
-        <h1>Ong Connect</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="projetos.html" class="ativo">Projetos</a></li>
-                <li><a href="cadastro.html">Seja Voluntário</a></li>
-            </ul>
-        </nav>
-    </header>
+  <!-- Cabeçalho -->
+  <header>
+    <h1>Ong Connect</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="projetos.html" class="ativo">Projetos</a></li>
+        <li><a href="cadastro.html">Seja Voluntário</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <!-- Conteúdo principal -->
-    <main class="pagina-projetos">
-        <h2>Nossos Projetos</h2>
-        <p>Conheça os projetos que estão transformando vidas por meio da solidariedade e da colaboração.</p>
+  <!-- Conteúdo principal -->
+  <main class="pagina-projetos">
+    <h2 class="titulo-pagina">Nossos Projetos</h2>
+    <p class="descricao-pagina">
+      Conheça os projetos que estão transformando vidas por meio da solidariedade e da colaboração.
+    </p>
 
-        <div class="cards">
-            <div class="card">
-                <h3>Educação para Todos</h3>
-                <p>Oferecemos aulas de reforço e inclusão digital para crianças e jovens de comunidades carentes.</p>
-                <button onclick="participar('Educação para Todos')">Participar</button>
-                <button onclick="doar('Educação para Todos')">Doar</button>
-            </div>
-
-            <div class="card">
-                <h3>Meio Ambiente Consciente</h3>
-                <p>Promovemos ações de reciclagem, limpeza de praças e plantio de árvores nas cidades.</p>
-                <button onclick="participar('Meio Ambiente Consciente')">Participar</button>
-                <button onclick="doar('Meio Ambiente Consciente')">Doar</button>
-            </div>
-
-            <div class="card">
-                <h3>Amor em Ação</h3>
-                <p>Organizamos campanhas de arrecadação de alimentos, roupas e brinquedos para famílias em vulnerabilidade.</p>
-                <button onclick="participar('Amor em Ação')">Participar</button>
-                <button onclick="doar('Amor em Ação')">Doar</button>
-            </div>
-
-            <div class="card">
-                <h3>Pet Amigo</h3>
-                <p>Projeto de resgate e adoção de animais abandonados, promovendo o cuidado e o amor pelos pets.</p>
-                <button onclick="participar('Pet Amigo')">Participar</button>
-                <button onclick="doar('Pet Amigo')">Doar</button>
-            </div>
-
-            <div class="card">
-                <h3>Saúde em Movimento</h3>
-                <p>Mutirões de atendimento médico e orientação sobre prevenção de doenças em comunidades carentes.</p>
-                <button onclick="participar('Saúde em Movimento')">Participar</button>
-                <button onclick="doar('Saúde em Movimento')">Doar</button>
-            </div>
+    <div class="cards">
+      <div class="card">
+        <h3>Educação para Todos</h3>
+        <p>Oferecemos aulas de reforço e inclusão digital para crianças e jovens de comunidades carentes.</p>
+        <div class="botoes-card">
+          <button class="btn-primario" onclick="participar('Educação para Todos')">Participar</button>
+          <button class="btn-secundario" onclick="doar('Educação para Todos')">Doar</button>
         </div>
+      </div>
 
-        <div class="ver-todos" style="margin-top: 40px;">
-            <a href="index.html" class="botao">Voltar ao início</a>
+      <div class="card">
+        <h3>Meio Ambiente Consciente</h3>
+        <p>Promovemos ações de reciclagem, limpeza de praças e plantio de árvores nas cidades.</p>
+        <div class="botoes-card">
+          <button class="btn-primario" onclick="participar('Meio Ambiente Consciente')">Participar</button>
+          <button class="btn-secundario" onclick="doar('Meio Ambiente Consciente')">Doar</button>
         </div>
-    </main>
+      </div>
 
-    <!-- Rodapé -->
-    <footer>
-        <p>&copy; 2025 Ong Connect - Todos os direitos reservados.</p>
-        <p>Contato: contato@ongconnect.org.br | Instagram: @ongconnect</p>
-    </footer>
+      <div class="card">
+        <h3>Amor em Ação</h3>
+        <p>Organizamos campanhas de arrecadação de alimentos, roupas e brinquedos para famílias em vulnerabilidade.</p>
+        <div class="botoes-card">
+          <button class="btn-primario" onclick="participar('Amor em Ação')">Participar</button>
+          <button class="btn-secundario" onclick="doar('Amor em Ação')">Doar</button>
+        </div>
+      </div>
 
-    <!-- JavaScript -->
-    <script src="index.js"></script>
+      <div class="card">
+        <h3>Pet Amigo</h3>
+        <p>Projeto de resgate e adoção de animais abandonados, promovendo o cuidado e o amor pelos pets.</p>
+        <div class="botoes-card">
+          <button class="btn-primario" onclick="participar('Pet Amigo')">Participar</button>
+          <button class="btn-secundario" onclick="doar('Pet Amigo')">Doar</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Saúde em Movimento</h3>
+        <p>Mutirões de atendimento médico e orientação sobre prevenção de doenças em comunidades carentes.</p>
+        <div class="botoes-card">
+          <button class="btn-primario" onclick="participar('Saúde em Movimento')">Participar</button>
+          <button class="btn-secundario" onclick="doar('Saúde em Movimento')">Doar</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="ver-todos">
+      <a href="index.html" class="botao">Voltar ao início</a>
+    </div>
+  </main>
+
+  <!-- Rodapé -->
+  <footer>
+    <div class="conteudo-footer">
+      <h3>Ong Connect</h3>
+      <p>Conectando pessoas e projetos que transformam o mundo.  
+         Junte-se a nós e faça parte dessa corrente do bem.</p>
+      <div class="redes">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-whatsapp"></i></a>
+      </div>
+      <div class="copy">
+        &copy; 2025 Ong Connect. Todos os direitos reservados.
+      </div>
+    </div>
+  </footer>
+
+  <script src="index.js"></script>
 </body>
 </html>
