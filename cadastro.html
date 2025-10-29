@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Voluntário - Ong Connect</title>
+
+    <!-- Conexão com o estilo -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Fonte Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Cabeçalho -->
+    <header>
+        <h1>Ong Connect</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="projetos.html">Projetos</a></li>
+                <li><a href="cadastro.html" class="ativo">Seja Voluntário</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Conteúdo principal -->
+    <main class="pagina-cadastro">
+        <h2>Cadastre-se como Voluntário</h2>
+        <p>Preencha o formulário abaixo e junte-se à nossa rede de solidariedade 💙</p>
+
+        <form id="formCadastro">
+            <label for="nome">Nome completo:</label>
+            <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" placeholder="exemplo@email.com" required>
+
+            <label for="telefone">Telefone:</label>
+            <input type="tel" id="telefone" name="telefone" placeholder="(11) 99999-9999" required>
+
+            <label for="motivo">Por que quer ser voluntário?</label>
+            <textarea id="motivo" name="motivo" rows="4" placeholder="Escreva aqui..." required></textarea>
+
+            <button type="submit">Enviar Cadastro</button>
+        </form>
+
+        <!-- Mensagem de confirmação -->
+        <p id="mensagem" class="mensagem-sucesso"></p>
+
+        <div class="ver-todos">
+            <a href="index.html" class="botao">Voltar ao início</a>
+        </div>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2025 Ong Connect - Todos os direitos reservados.</p>
+        <p>Contato: contato@ongconnect.org.br | Instagram: @ongconnect</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="index.js"></script>
+</body>
+</html>

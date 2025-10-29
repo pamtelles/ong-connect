@@ -1,128 +1,236 @@
-:root {
-    --max-width: 1100px;
-    --gap: 1rem;
-    --accent: #1d7a8c;
-    --bg: #f6f8fa;
-    --text: #222;
-    --muted: #666;
-}
-
+/* ======== CONFIGURAÇÕES GERAIS ======== */
 * {
-    box-sizing: border-box
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
 }
 
 body {
-    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-    margin: 0;
-    color: var(--text);
-    background: var(--bg);
-    line-height: 1.4
+    background-color: #f5f8fa; /* fundo levemente cinza */
+    color: #333;
+    line-height: 1.6;
 }
 
-.container {
-    max-width: var(--max-width);
-    margin: 0 auto;
-    padding: 1rem
-}
-
-.site-header {
-    background: #fff;
-    border-bottom: 1px solid #e6e9ed
-}
-
-.site-header .container {
+/* ======== CABEÇALHO ======== */
+header {
+    background-color: #0077b6; /* azul principal */
+    color: white;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: space-between
+    padding: 15px 40px;
+    flex-wrap: wrap;
 }
 
-.logo {
-    font-weight: 700;
-    color: var(--accent);
-    text-decoration: none
+header h1 {
+    font-size: 24px;
+    font-weight: 600;
 }
 
-.nav-list {
+nav ul {
     list-style: none;
     display: flex;
-    gap: 1rem;
-    margin: 0;
-    padding: 0
+    gap: 20px;
 }
 
-.nav-list a {
+nav a {
+    color: white;
     text-decoration: none;
-    color: var(--text)
+    font-weight: 500;
+    transition: 0.3s;
 }
 
-.hero {
-    padding: 2rem 0;
-    background: linear-gradient(90deg, #eaf6f8, transparent)
+nav a:hover {
+    text-decoration: underline;
 }
 
-.projects {
-    padding: 2rem 0
-}
-
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: var(--gap);
-    list-style: none;
-    padding: 0;
-    margin: 0
-}
-
-.projects-grid li {
-    background: #fff;
-    padding: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, .05)
-}
-
-.btn {
-    display: inline-block;
-    padding: .6rem .9rem;
-    background: var(--accent);
-    color: #fff;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer
-}
-
-.btn-secondary {
-    background: #ccc;
-    color: #111
-}
-
-.cta {
-    padding: 1.5rem 0;
-    text-align: center
-}
-
-.site-footer {
-    padding: 1rem 0;
+/* ======== SEÇÃO SOBRE ======== */
+.sobre {
+    padding: 40px 20px;
+    max-width: 900px;
+    margin: 0 auto;
     text-align: center;
-    font-size: .9rem;
-    color: var(--muted)
 }
 
-.modal {
-    position: fixed;
-    inset: 0;
-    display: none;
-    align-items: center;
+.sobre h2 {
+    color: #0077b6;
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.sobre p {
+    font-size: 18px;
+}
+
+/* ======== SEÇÃO PROJETOS ======== */
+.projetos-destaque {
+    background-color: #e3f2fd; /* azul clarinho */
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.projetos-destaque h2 {
+    color: #0077b6;
+    font-size: 26px;
+    margin-bottom: 30px;
+}
+
+/* container dos cards */
+.cards {
+    display: flex;
     justify-content: center;
-    background: rgba(0, 0, 0, .4)
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
-.modal[aria-hidden="false"] {
-    display: flex
+/* cada card individual */
+.card {
+    background: white;
+    width: 280px;
+    border-radius: 12px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: left;
+    transition: transform 0.3s;
 }
 
-.modal-content {
-    background: #fff;
-    padding: 1rem 1.2rem;
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    color: #0077b6;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+.card button {
+    background-color: #0077b6;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.card button:hover {
+    background-color: #005f8d;
+}
+
+/* botão "Ver todos" */
+.ver-todos {
+    margin-top: 30px;
+}
+
+.botao {
+    background-color: #0096c7;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
     border-radius: 8px;
-    width: min(480px, 95%)
+    transition: 0.3s;
+}
+
+.botao:hover {
+    background-color: #0077b6;
+}
+
+/* ======== RODAPÉ ======== */
+footer {
+    background-color: #023e8a;
+    color: white;
+    text-align: center;
+    padding: 20px 10px;
+    font-size: 14px;
+}
+
+/* ======== RESPONSIVIDADE (celular) ======== */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+    }
+}
+
+/* ======== FORMULÁRIO DE CADASTRO ======== */
+.pagina-cadastro {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    text-align: left;
+}
+
+.pagina-cadastro h2 {
+    text-align: center;
+    color: #0077b6;
+    margin-bottom: 10px;
+}
+
+.pagina-cadastro p {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    font-weight: 600;
+    color: #333;
+}
+
+input, textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+    width: 100%;
+}
+
+button[type="submit"] {
+    background-color: #0077b6;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #005f8d;
+}
+
+/* Mensagem de sucesso */
+.mensagem-sucesso {
+    margin-top: 20px;
+    font-weight: 600;
+    color: #0077b6;
+    text-align: center;
+    display: none;
 }

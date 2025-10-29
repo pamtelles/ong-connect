@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projetos - Ong Connect</title>
+
+    <!-- Link para o estilo -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Fonte Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Cabeçalho -->
+    <header>
+        <h1>Ong Connect</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="projetos.html" class="ativo">Projetos</a></li>
+                <li><a href="cadastro.html">Seja Voluntário</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Conteúdo principal -->
+    <main class="pagina-projetos">
+        <h2>Nossos Projetos</h2>
+        <p>Conheça os projetos que estão transformando vidas por meio da solidariedade e da colaboração.</p>
+
+        <div class="cards">
+            <div class="card">
+                <h3>Educação para Todos</h3>
+                <p>Oferecemos aulas de reforço e inclusão digital para crianças e jovens de comunidades carentes.</p>
+                <button onclick="participar('Educação para Todos')">Participar</button>
+                <button onclick="doar('Educação para Todos')">Doar</button>
+            </div>
+
+            <div class="card">
+                <h3>Meio Ambiente Consciente</h3>
+                <p>Promovemos ações de reciclagem, limpeza de praças e plantio de árvores nas cidades.</p>
+                <button onclick="participar('Meio Ambiente Consciente')">Participar</button>
+                <button onclick="doar('Meio Ambiente Consciente')">Doar</button>
+            </div>
+
+            <div class="card">
+                <h3>Amor em Ação</h3>
+                <p>Organizamos campanhas de arrecadação de alimentos, roupas e brinquedos para famílias em vulnerabilidade.</p>
+                <button onclick="participar('Amor em Ação')">Participar</button>
+                <button onclick="doar('Amor em Ação')">Doar</button>
+            </div>
+
+            <div class="card">
+                <h3>Pet Amigo</h3>
+                <p>Projeto de resgate e adoção de animais abandonados, promovendo o cuidado e o amor pelos pets.</p>
+                <button onclick="participar('Pet Amigo')">Participar</button>
+                <button onclick="doar('Pet Amigo')">Doar</button>
+            </div>
+
+            <div class="card">
+                <h3>Saúde em Movimento</h3>
+                <p>Mutirões de atendimento médico e orientação sobre prevenção de doenças em comunidades carentes.</p>
+                <button onclick="participar('Saúde em Movimento')">Participar</button>
+                <button onclick="doar('Saúde em Movimento')">Doar</button>
+            </div>
+        </div>
+
+        <div class="ver-todos" style="margin-top: 40px;">
+            <a href="index.html" class="botao">Voltar ao início</a>
+        </div>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2025 Ong Connect - Todos os direitos reservados.</p>
+        <p>Contato: contato@ongconnect.org.br | Instagram: @ongconnect</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="index.js"></script>
+</body>
+</html>
