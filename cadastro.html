@@ -20,15 +20,21 @@
 
     <!-- Cabeçalho -->
     <header>
-        <h1>Ong Connect</h1>
+        <h1 class="logo">Ong Connect</h1>
+
+        <button class="menu-toggle" aria-label="Abrir menu">
+            <i class="fas fa-bars"></i>
+        </button>
+
         <nav>
-            <ul>
+            <ul class="menu">
                 <li><a href="index.html">Início</a></li>
                 <li><a href="projetos.html">Projetos</a></li>
-                <li><a href="cadastro.html" class="ativo">Seja Voluntário</a></li>
+                <li><a href="cadastro.html">Seja Voluntário</a></li>
             </ul>
         </nav>
     </header>
+
 
     <!-- Seção de cadastro -->
     <main class="pagina-cadastro">
@@ -124,6 +130,9 @@
             this.reset();
         });
     </script>
+    
+    <!-- Arquivo JS -->
+    <script src="index.js"></script>
 
 </body>
 
