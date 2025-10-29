@@ -518,12 +518,25 @@ footer .copy {
 }
 
 /* ======== PÁGINA PROJETOS ======== */
+
+.sobre-projetos  {
+  padding: 150px 0%; /* espaçamento alto e confortável */
+  background: linear-gradient(135deg,rgba(90,200,250,0.6), rgba(79,70,229,0.6)), /* degrade azul moderno */
+  url(imagem/projetos.png) no-repeat center/cover; /* imagem de fundo */
+  color: #fff; /* texto branco para contraste */
+  text-align: center; /* centraliza tudo */
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+
 .pagina-projetos {
   max-width: 1100px;
   margin: 100px auto;
   text-align: center;
   color: #1e293b;
   padding: 0 20px;
+  
 }
 
 .pagina-projetos .titulo-pagina {
