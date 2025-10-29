@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <title>Ong Connect</title>
 
     <!-- Conexão com o CSS -->
@@ -11,18 +12,24 @@
 
     <!-- Fonte bonita do Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    
+
     <!-- Fontes de ícones -->
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 </head>
+
 <body>
 
     <!-- Cabeçalho do site -->
     <header>
-        <h1>Ong Connect</h1>
+        <h1 class="logo">Ong Connect</h1>
+
+        <button class="menu-toggle" aria-label="Abrir menu">
+            <i class="fas fa-bars"></i>
+        </button>
+
         <nav>
-            <ul>
+            <ul class="menu">
                 <li><a href="index.html">Início</a></li>
                 <li><a href="projetos.html">Projetos</a></li>
                 <li><a href="cadastro.html">Seja Voluntário</a></li>
@@ -36,8 +43,10 @@
         <section class="sobre">
             <h2>Sobre Nós</h2>
             <p>
-                A <strong>Ong Connect</strong> é uma organização sem fins lucrativos que conecta pessoas dispostas a transformar o mundo. 
-                Nosso objetivo é apoiar causas sociais, ambientais e educacionais por meio de projetos colaborativos e voluntariado.
+                A <strong>Ong Connect</strong> é uma organização sem fins lucrativos que conecta pessoas dispostas a
+                transformar o mundo.
+                Nosso objetivo é apoiar causas sociais, ambientais e educacionais por meio de projetos colaborativos e
+                voluntariado.
             </p>
         </section>
 
@@ -48,7 +57,8 @@
             <div class="cards">
                 <div class="card">
                     <h3>Educação para Todos</h3>
-                    <p>Oferecemos aulas de reforço e inclusão digital para crianças e jovens de comunidades carentes.</p>
+                    <p>Oferecemos aulas de reforço e inclusão digital para crianças e jovens de comunidades carentes.
+                    </p>
                     <a href="projetos.html" class="botao">Ver mais</a>
 
                 </div>
@@ -62,7 +72,7 @@
 
                 <div class="card">
                     <h3>Amor em Ação</h3>
-                      <p>Campanhas de arrecadação de alimentos, roupas e brinquedos para famílias em vulnerabilidade.</p>
+                    <p>Campanhas de arrecadação de alimentos, roupas e brinquedos para famílias em vulnerabilidade.</p>
                     <a href="projetos.html" class="botao">Ver mais</a>
 
                 </div>
@@ -75,30 +85,31 @@
     </main>
 
     <!-- Rodapé -->
-   <footer>
-  <div class="conteudo-footer">
-    <h3>Ong Connect</h3>
-    <p>
-      Conectando pessoas e projetos que transformam o mundo.  
-      Junte-se a nós e faça parte dessa corrente do bem.
-    </p>
+    <footer>
+        <div class="conteudo-footer">
+            <h3>Ong Connect</h3>
+            <p>
+                Conectando pessoas e projetos que transformam o mundo.
+                Junte-se a nós e faça parte dessa corrente do bem.
+            </p>
 
-    <div class="redes">
-      <a href="#"><i class="fab fa-facebook-f"></i></a>
-      <a href="#"><i class="fab fa-instagram"></i></a>
-      <a href="#"><i class="fab fa-linkedin-in"></i></a>
-      <a href="#"><i class="fab fa-whatsapp"></i></a>
-    </div>
+            <div class="redes">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+            </div>
 
-    <div class="copy">
-      &copy; 2025 Ong Connect. Todos os direitos reservados.
-    </div>
-  </div>
-</footer>
+            <div class="copy">
+                &copy; 2025 Ong Connect. Todos os direitos reservados.
+            </div>
+        </div>
+    </footer>
 
 
     <!-- Arquivo JS -->
     <script src="index.js"></script>
 
 </body>
+
 </html>

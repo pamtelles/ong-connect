@@ -53,6 +53,12 @@ header h1 {
   cursor: default;
 }
 
+/* Logo menor no mobile */
+.logo {
+  font-size: 1.4rem;
+}
+
+
 /* Menu */
 nav ul {
   list-style: none;
@@ -71,6 +77,22 @@ nav a {
   transition: all 0.3s ease;
 }
 
+/* Botão do menu */
+.menu-toggle {
+  display: none; /* só aparece no mobile */
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Menu escondido por padrão no mobile */
+nav ul.menu {
+  display: flex;
+  gap: 30px;
+}
+
 /* Linha branca animada abaixo dos links */
 nav a::after {
   content: "";
@@ -86,8 +108,6 @@ nav a::after {
 nav a:hover::after {
   width: 100%;
 }
-
-
 
 /* ==== SEÇÃO SOBRE NÓS ==== */
 .sobre {
@@ -290,6 +310,38 @@ nav a:hover::after {
   .botao { padding: 10px 20px; font-size: 0.95rem; }
 }
 
+/* Responsividade mobile */
+@media (max-width: 768px) {
+  header {
+    padding: 15px 20px;
+  }
+
+  nav ul.menu {
+    display: none; /* escondido */
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 10px;
+    background: rgba(79, 70, 229, 0.95);
+    padding: 15px;
+    border-radius: 10px;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    width: 200px;
+  }
+
+  nav ul.menu.show {
+    display: flex; /* quando o botão for clicado */
+  }
+
+  .menu-toggle {
+    display: block; /* aparece no mobile */
+  }
+
+  header h1 {
+    font-size: 1.4rem; /* menor no mobile */
+  }
+}
 
 /* ======== RODAPÉ MODERNO ======== */
 footer {

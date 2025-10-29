@@ -37,5 +37,11 @@ function doar(projeto) {
     alert(`💖 Obrigado por querer ajudar o projeto: ${projeto}! Em breve, adicionaremos opções de doação.`);
 }
 
+const menuToggle = document.querySelector(".menu-toggle");
+const menu = document.querySelector("nav ul.menu");
+
+menuToggle.addEventListener("click", () => {
+  menu.classList.toggle("show");
+});
 
 
