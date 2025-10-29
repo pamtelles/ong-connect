@@ -49,19 +49,22 @@
                 <div class="card">
                     <h3>Educação para Todos</h3>
                     <p>Oferecemos aulas de reforço e inclusão digital para crianças e jovens de comunidades carentes.</p>
-                    <button onclick="window.location.href='projetos.html'">Ver mais</button>
+                    <a href="projetos.html" class="botao">Ver mais</a>
+
                 </div>
 
                 <div class="card">
                     <h3>Meio Ambiente Consciente</h3>
                     <p>Promovemos ações de reciclagem e plantio de árvores em áreas urbanas e rurais.</p>
-                    <button onclick="window.location.href='projetos.html'">Ver mais</button>
+                    <a href="projetos.html" class="botao">Ver mais</a>
+
                 </div>
 
                 <div class="card">
                     <h3>Amor em Ação</h3>
                       <p>Campanhas de arrecadação de alimentos, roupas e brinquedos para famílias em vulnerabilidade.</p>
-                    <button onclick="window.location.href='projetos.html'">Ver mais</button>
+                    <a href="projetos.html" class="botao">Ver mais</a>
+
                 </div>
             </div>
 
@@ -96,5 +99,16 @@
 
     <!-- Arquivo JS -->
     <script src="index.js"></script>
+
+    <!-- Modal  -->
+<div id="modal" class="modal">
+  <div class="modal-conteudo">
+    <span class="fechar" onclick="fecharModal()">&times;</span>
+    <div id="modalTexto"></div>
+  </div>
+</div>
+
+
+
 </body>
 </html>

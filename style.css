@@ -12,6 +12,8 @@ body {
     line-height: 1.6;
 }
 
+
+
 /* ======== CABEÇALHO COM EFEITO VIDRO ======== */
 header {
   background: rgba(79, 70, 229, 0.7); /* tom azul translúcido */
@@ -85,24 +87,6 @@ nav a:hover::after {
   width: 100%;
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    align-items: center;
-    padding: 20px 40px;
-  }
-
-  nav ul {
-    flex-direction: column;
-    gap: 15px;
-    margin-top: 15px;
-  }
-
-  nav a {
-    font-size: 1rem;
-  }
-}
 
 
 /* ==== SEÇÃO SOBRE NÓS ==== */
@@ -191,7 +175,7 @@ nav a:hover::after {
 .card {
   background: rgba(255, 255, 255, 0.9);
   border-radius: 20px;
-  padding: 40px 30px;
+  padding: 30px 25px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
   border: 1px solid rgba(79, 70, 229, 0.15);
   transition: all 0.4s ease;
@@ -210,6 +194,7 @@ nav a:hover::after {
   background: radial-gradient(circle, rgba(90, 200, 250, 0.15), transparent 70%);
   transition: opacity 0.5s ease;
   opacity: 0;
+  pointer-events: none;
 }
 
 .card:hover::before {
@@ -235,25 +220,8 @@ nav a:hover::after {
   margin-bottom: 25px;
 }
 
-/* ======== BOTÃO ======== */
-.card button {
-  background: linear-gradient(135deg, #4f46e5, #5ac8fa);
-  color: #fff;
-  border: none;
-  border-radius: 30px;
-  padding: 12px 28px;
-  font-size: 1rem;
-  font-weight: 500;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
 
-.card button:hover {
-  background: linear-gradient(135deg, #5ac8fa, #4f46e5);
-  transform: scale(1.05);
-  box-shadow: 0 5px 15px rgba(79, 70, 229, 0.3);
-}
-/* ======== BOTÃO "VER TODOS" MODERNO ======== */
+/* ======== BOTÃO "VER TODOS"  ======== */
 .ver-todos {
   margin-top: 40px;
   text-align: center;           /* centraliza o botão */
@@ -297,7 +265,7 @@ nav a:hover::after {
 /* responsividade: ajustar padding em telas pequenas */
 @media (max-width: 480px) {
   .botao {
-    padding: 10px 20px;
+    padding: 20px 15px;
     font-size: 0.95rem;
   }
 }
@@ -305,18 +273,23 @@ nav a:hover::after {
 
 /* ======== RESPONSIVIDADE ======== */
 @media (max-width: 768px) {
-  .projetos-destaque {
-    padding: 80px 8%;
-  }
+  header { flex-direction: column; align-items: center; padding: 20px 40px; }
+  nav ul { flex-direction: column; gap: 15px; margin-top: 15px; }
+  nav a { font-size: 1rem; }
 
-  .projetos-destaque h2 {
-    font-size: 2rem;
-  }
-
-  .card {
-    padding: 30px 20px;
-  }
+  .projetos-destaque { padding: 80px 8%; }
+  .projetos-destaque h2 { font-size: 2rem; }
+  .card { padding: 30px 20px; }
 }
+
+@media (max-width: 600px) {
+  footer { padding: 40px 15px; }
+  footer h3 { font-size: 1.4rem; }
+  footer p { font-size: 0.95rem; }
+  footer .redes a { font-size: 1.3rem; }
+  .botao { padding: 10px 20px; font-size: 0.95rem; }
+}
+
 
 /* ======== RODAPÉ MODERNO ======== */
 footer {
@@ -401,24 +374,6 @@ footer .copy {
   margin-top: 20px;
 }
 
-/* Responsividade */
-@media (max-width: 600px) {
-  footer {
-    padding: 40px 15px;
-  }
-
-  footer h3 {
-    font-size: 1.4rem;
-  }
-
-  footer p {
-    font-size: 0.95rem;
-  }
-
-  footer .redes a {
-    font-size: 1.3rem;
-  }
-}
 
 /* ======== PÁGINA DE CADASTRO ======== */
 .pagina-cadastro {
@@ -606,3 +561,4 @@ footer .copy {
   background-color: #0096c7;
   color: #fff;
 }
+
