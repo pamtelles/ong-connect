@@ -113,7 +113,7 @@ nav a:hover::after {
 .sobre {
   padding: 200px 10%; /* espaçamento alto e confortável */
   background: linear-gradient(135deg,rgba(90,200,250,0.6), rgba(79,70,229,0.6)), /* degrade azul moderno */
-  url(imagem/connect.png) no-repeat center/cover; /* imagem de fundo */
+  url(imagens/connect.png) no-repeat center/cover; /* imagem de fundo */
   color: #fff; /* texto branco para contraste */
   text-align: center; /* centraliza tudo */
   border-radius: 0 0 80px 80px; /* cantos arredondados no final da seção */
@@ -522,7 +522,7 @@ footer .copy {
 .sobre-projetos  {
   padding: 150px 0%; /* espaçamento alto e confortável */
   background: linear-gradient(135deg,rgba(90,200,250,0.6), rgba(79,70,229,0.6)), /* degrade azul moderno */
-  url(imagem/projetos.png) no-repeat center/cover; /* imagem de fundo */
+  url(imagens/projetos.png) no-repeat center/cover; /* imagem de fundo */
   color: #fff; /* texto branco para contraste */
   text-align: center; /* centraliza tudo */
   position: relative;
