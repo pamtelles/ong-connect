@@ -37,6 +37,24 @@ function doar(projeto) {
     alert(`💖 Obrigado por querer ajudar o projeto: ${projeto}! Em breve, adicionaremos opções de doação.`);
 }
 
+// Função alternativa para capturar o nome do projeto diretamente do elemento clicado
+function participar(elemento) {
+  const nomeProjeto = elemento.parentElement.querySelector("h3").innerText;
+  alert(`💪 Você demonstrou interesse em participar do projeto: ${nomeProjeto}!`);
+}
+
+function participar(elemento) {
+  event.preventDefault(); // impede o comportamento padrão do link
+  const nomeProjeto = elemento.parentElement.querySelector("h3").innerText;
+  alert(`💪 Você demonstrou interesse em participar do projeto: ${nomeProjeto}!`);
+}
+
+function doar(elemento) {
+  event.preventDefault(); // impede o comportamento padrão do link
+  const nomeProjeto = elemento.parentElement.querySelector("h3").innerText;
+  alert(`💖 Obrigado por querer ajudar o projeto: ${nomeProjeto}! Em breve, adicionaremos opções de doação.`);
+}
+
 const menuToggle = document.querySelector(".menu-toggle");
 const menu = document.querySelector("nav ul.menu");
 

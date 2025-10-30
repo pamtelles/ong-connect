@@ -118,17 +118,11 @@ nav a:hover::after {
 /* ==== SEÇÃO SOBRE NÓS ==== */
 .sobre {
     padding: 200px 10%;
-    /* espaçamento alto e confortável */
     background: linear-gradient(135deg, rgba(90, 200, 250, 0.6), rgba(79, 70, 229, 0.6)),
-        /* degrade azul moderno */
         url(imagens/connect.png) no-repeat center/cover;
-    /* imagem de fundo */
     color: #fff;
-    /* texto branco para contraste */
     text-align: center;
-    /* centraliza tudo */
-    border-radius: 0 0 80px 80px;
-    /* cantos arredondados no final da seção */
+    border-radius: 0 0 40px 40px;
     position: relative;
     overflow: hidden;
     transition: all 0.5s ease;
@@ -191,7 +185,6 @@ nav a:hover::after {
 .projetos-destaque {
     padding: 120px 10%;
     background: #f8fafc;
-    /* fundo claro para contraste */
     text-align: center;
     color: #333;
 }
@@ -200,7 +193,6 @@ nav a:hover::after {
     font-size: 2.5rem;
     font-weight: 700;
     color: #4f46e5;
-    /* combina com o cabeçalho */
     margin-bottom: 60px;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -276,7 +268,6 @@ nav a:hover::after {
 .ver-todos {
     margin-top: 40px;
     text-align: center;
-    /* centraliza o botão */
 }
 
 /* botão principal estilo "pill" com degradê */
@@ -292,7 +283,12 @@ nav a:hover::after {
     box-shadow: 0 8px 20px rgba(79, 70, 229, 0.18);
     font-weight: 600;
     letter-spacing: 0.3px;
+    margin: 5px 5px;
 
+}
+
+.botao a {
+    display: flex;
 }
 
 /* hover: brilho + leve crescimento */
@@ -648,6 +644,9 @@ footer .copy {
 
 .card-projetos {
 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
     align-items: center;
     background: rgba(255, 255, 255, 0.9);
     border-radius: 20px;
